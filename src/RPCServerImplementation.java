@@ -26,7 +26,7 @@ public class RPCServerImplementation extends java.rmi.server.UnicastRemoteObject
 			return_string = "Placed Key \"" + key + "\" and Value \"" + value + "\" into the Key/Value store";
 		}
 		store.put(key, value); // place key/value into the Map
-		System.out.println("Key \"" + key + "\" Value \"" + store.get(key) + "\" (re)placed into the Key/Value store at " + (System.currentTimeMillis()-timestart) + " milliseconds");
+		System.out.println(return_string + " at " + (System.currentTimeMillis()-timestart) + " milliseconds");
 		return return_string;
 	}
 
@@ -35,12 +35,12 @@ public class RPCServerImplementation extends java.rmi.server.UnicastRemoteObject
 		String return_string = "Value for Key \"" + key + "\" not found in Key/Value store";
 		if (store.containsKey(key))
 		{
-			return_string = "The Value for Key \"" + key + "\" is \"" + store.get(key);
-			System.out.println("Value \"" + return_string + "\" for Key \"" + key + "\" retrieved at " + (System.currentTimeMillis()-timestart) + " milliseconds");
+			return_string = "Value for Key \"" + key + "\" is \"" + store.get(key) + "\"";
+			System.out.println(return_string + " retrieved at " + (System.currentTimeMillis()-timestart) + " milliseconds");
 		}
 		else
 		{
-			System.out.println("No value found in store for Key \"" + key + "\" at " + (System.currentTimeMillis()-timestart) + " milliseconds");
+			System.out.println(return_string + " at " + (System.currentTimeMillis()-timestart) + " milliseconds");
 		}
 		return return_string;
 	}
