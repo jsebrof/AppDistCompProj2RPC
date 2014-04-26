@@ -1,0 +1,4 @@
+javac RPCClient.java
+javac RPCServer.java
+javac RPCServerInterface.java
+javac RPCServerImplementation.java
