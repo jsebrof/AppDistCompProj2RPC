@@ -16,8 +16,8 @@ java RPCClient n01 1099 get 6 6
 java RPCClient n01 1099 get 8 8
 java RPCClient n01 1099 get 10 10
 
-java RPCClient n02 1099 delete 1 1
-java RPCClient n02 1099 delete 3 3
-java RPCClient n02 1099 delete 5 5
-java RPCClient n02 1099 delete 7 7
-java RPCClient n02 1099 delete 9 9
+java RPCClient n01 1099 delete 1 1
+java RPCClient n01 1099 delete 3 3
+java RPCClient n01 1099 delete 5 5
+java RPCClient n01 1099 delete 7 7
+java RPCClient n01 1099 delete 9 9
