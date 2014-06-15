@@ -16,6 +16,12 @@ public class RPCServerImplementation extends java.rmi.server.UnicastRemoteObject
 
 	public synchronized String Put(String key, String value) throws RemoteException // synchronized means thread safety
 	{
+		int i = 0;
+		while(true){
+			if(i==1){
+				break;
+			}
+		}
 		String return_string;
 		if (store.containsKey(key))
 		{

@@ -2,11 +2,17 @@ import java.rmi.Naming;			// Import rmi naming - so you can lookup remote object
 import java.rmi.RemoteException;	// Import exceptions
 import java.net.MalformedURLException;	
 import java.rmi.NotBoundException;	
+import java.util.Properties;
 
 public class RPCClient
 {
 	public static void main(String[] args)
 	{
+		Properties p = System.getProperties();
+		p.setProperty("sun.rmi.transport.connectionTimeout", "1000");
+		p.setProperty("sun.rmi.transport.tcp.handshakeTimeout", "1000");
+		p.setProperty("sun.rmi.transport.tcp.responseTimeout", "1000");
+		p.setProperty("sun.rmi.transport.tcp.readTimeout", "1000");
 		long timestart = System.currentTimeMillis();
 
 		try
